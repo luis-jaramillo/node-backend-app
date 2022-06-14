@@ -12,10 +12,7 @@ jobs:
 
       - name: Code Checkout
         uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm ci
-
+      - run: echo "Starting Code linting"
       - name: Code Linting
         run: npm run lint
-
+      - run: echo "Starting Code finish"
