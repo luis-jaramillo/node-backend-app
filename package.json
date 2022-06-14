@@ -16,8 +16,6 @@
     "e2e:headless": "npm run e2e:protractor:headless",
     "e2e:protractor:headless": "npm run e2e:protractor",
     "e2e:protractor": "protractor src/test/javascript/protractor.conf.js",
-    "preinstall": "cd server && npm run lint:fix",
-    "postinstall": "npm run e2e:update-webdriver",
     "e2e:update-webdriver": "webdriver-manager update --gecko false",
     "jest": "jest --coverage --logHeapUsage --maxWorkers=2 --config jest.conf.js",
     "jest:update": "npm run jest -- --updateSnapshot",
