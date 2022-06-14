@@ -11,3 +11,5 @@ jobs:
           node-version: 14.17.5
           cache: 'npm'
       - run: npm install
+      - name: Run ESLint
+        run: npm run lint
