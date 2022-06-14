@@ -4,21 +4,11 @@ jobs:
   linting:
     name: Linting # job name (unique id)
     runs-on: ubuntu-latest # on which machine to run
-    steps: # list of steps
-      - name: Install NodeJS
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14.17.5
-
-      - name: Code Checkout
-      - uses: actions/checkout@v3
-      - run: echo "Install Dependencies"
-      - name: Install Dependencies
-        run: npm install
-
-      - run: echo "Starting Code linting"
-      - name: Code Linting
-        run: npm run lint
-      - run: echo "Starting Code finish"
-
+steps:
+  - uses: actions/checkout@v3
+  - uses: actions/setup-node@v3
+    with:
+      node-version: 14.17.5
+      cache: 'npm'
+  - run: npm ci
+  - run: npm test
