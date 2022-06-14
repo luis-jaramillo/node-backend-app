@@ -4,11 +4,11 @@ jobs:
   linting:
     name: Linting # job name (unique id)
     runs-on: ubuntu-latest # on which machine to run
-steps:
-  - uses: actions/checkout@v3
-  - uses: actions/setup-node@v3
-    with:
-      node-version: 14.17.5
-      cache: 'npm'
-  - run: npm ci
-  - run: npm test
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14.17.5
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
