@@ -1,7 +1,7 @@
 name: LINT - BUILD - TEST
 on: [push]
 jobs:
-  linting:
+  pre-build:
     name: Linting # job name (unique id)
     runs-on: ubuntu-latest # on which machine to run
     steps:
