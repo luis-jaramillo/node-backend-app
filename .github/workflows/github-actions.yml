@@ -1,4 +1,4 @@
-name: LINT - BUILD - TEST
+name: pre-build
 on: [push]
 jobs:
   pre-build:
